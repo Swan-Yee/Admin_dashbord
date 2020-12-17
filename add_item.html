@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        
+    <div class="main container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-3 col-xl-2 vh-100 aside">
+                    <div class="d-flex justify-content-between align-items-center py-2 m-2">
+                            <div class="justify-content-start">
+                                <span>
+                                    <i class="feather-shopping-bag h3 text-light bg-primary p-1 rounded"></i>
+                                </span>
+                                <span class="font-weight-bold h4 align-items-center">Shop</span>
+                            </div>
+                            <div class="hide-sidebar-btn d-lg-none justify-content-end">
+                                <i class="feather-x text-primary" style="font-size: 2em;">
+                                </i>
+                            </div>
+                    </div>
+                    <div class="nav-menu">
+                        <ul>
+                            <li class="menu-item">
+                                <a href="template.html"" class="menu-item-link">
+                                <span>
+                                    <i class="feather-home"></i>       
+                                    Dashboard</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="menu-title">
+                                <span>Manage Items</span>
+                            </li>
+                            <li class="menu-item">
+                                <a href="add_item.html" class="menu-item-link active">
+                                <span>
+                                    <i class="feather-plus-circle"></i>       
+                                    add item</span>
+                                    <span class="badge badge-pill bg-white shadow-sm">14</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="item_list.html" class="menu-item-link">
+                                <span>
+                                    <i class="feather-plus-circle"></i>       
+                                    item list</span>
+                                    <span class="badge badge-pill bg-white shadow-sm">14</span>
+                                </a>
+                            </li>
+                            <li class="menu-space">
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-lg-9 col-xl-10 vh-100 content">
+                <div class="row header mb-3">
+                    <div class="col-12">
+                        <div class="p-2 bg-primary d-flex btn-light justify-content-between align-items-center">
+                            <div class="show-sidebar-btn">
+                                <i class="feather-menu text-light d-lg-none" style="font-size: 2em;">
+                                </i>
+                            </div>
+                            <form action="" method="post" class="d-none d-md-block mr-xl-auto">
+                                <div class="form-inline">
+                                    <input type="text" name="" id="" class="form-control mr-1">
+                                
+                                    <button class="btn btn-light">
+                                        <i class="feather-search text-primary"></i>
+                                    </button>
+                                </div> 
+                            </form>
+
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <img src="img/user/avatar1.jpg" alt="avatar" class="user-img"> Swan-Yee-Tun
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">Logout</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            <!-- bread crumb -->
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-white mb-4">
+                          <li class="breadcrumb-item"><a href="template.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="add_item.html">Items</a></li>
+                        </ol>
+                      </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h4>
+                                    <i class="feather-plus-circle text-primary"></i>Add Items
+                                </h4>
+                                <a href="item_list.html" class="btn btn-outline-primary">
+                                    <i class="feather-list"></i>
+                                </a>
+                            </div>
+                            <hr>
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-group">
+                                            <label for="photo">Photo Upload!
+                                                <i class="feather-info" title="only Support JPG and PNG"></i>
+                                            </label>
+                                            <input type="file" id="photo" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">Item Name</label>
+                                            <input type="text" class="form-control" id="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="type">Type</label>
+                                            <select name="" id="type" class="custom-select">
+                                                <option value="type1">Type1</option>
+                                                <option value="type2">Type2</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="type">Category</label>
+                                            <select name="" id="c" class="custom-select">
+                                                <option value="" selected disabled>Selecte Category</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="type">Sub-Category</label>
+                                            <select name="" class="custom-select" id="sc">
+                                                <option value="" selected disabled>Selecte Sub-Category</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="form-row">
+                                            <div class="col-6">
+                                                <label for="">Items Quantity</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <label for="type">Sub-Category</label>
+                                                    <select name="" id="type" class="custom-select">
+                                                        <option value="type1">Type1</option>
+                                                        <option value="type2">Type2</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    <div class="form-group">
+                                        <label for="price">Price</label>
+                                        <input type="number" class="form-control" id="pirce">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="des">Description</label>
+                                        <textarea name="des" id="des" cols="30" rows="10" class="form-control"></textarea>
+                                    </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <button class="btn btn-primary">Click Me!</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+                <script src="vendor/jquery-3.3.1.min.js"></script>
+                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="https://unpkg.com/@popperjs/core@2"></script>
+                <script src="vendor/way_point/jquery.waypoints.js"></script>
+                <!-- <script src="js/app.js"></script>
+                <script src="js/dashbord.js"></script> -->
+
+                <script>
+
+                    let category=['phone','TV','Tablet'];
+                    let subCategory=[
+                        {name:"iPhone",category_id:0},
+                        {name:"MI",category_id:0},
+                        {name:"HP",category_id:1},
+                        {name:"Dell",category_id:1},
+                        {name:"Sony",category_id:2},
+                        {name:"MiTV",category_id:2},
+                    ];
+
+                        category.map(function(el,index){
+                            $("#c").append(`<option value="${index}">${el}</optoin>`)
+                        })
+
+                        subCategory.map(function(el,index){
+                            $("#sc").append(`<option value="${index}" data-category="${el.category_id}">${el.name}</optoin>`)
+                        });
+
+                        $("#c").on("change",function () {
+        let currentCategoryId = $(this).val();
+        $("#sc option").hide();
+        $(`[data-category=${currentCategoryId}]`).show();
+    });
+
+                </script>
+
+</body>
+</html>

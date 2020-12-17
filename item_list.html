@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="vendor/data_table/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-3 col-xl-2 vh-100 aside">
+                    <div class="d-flex justify-content-between align-items-center py-2 m-2">
+                            <div class="justify-content-start">
+                                <span>
+                                    <i class="feather-shopping-bag h3 text-light bg-primary p-1 rounded"></i>
+                                </span>
+                                <span class="font-weight-bold h4 align-items-center">Shop</span>
+                            </div>
+                            <div class="hide-sidebar-btn d-lg-none justify-content-end">
+                                <i class="feather-x text-primary" style="font-size: 2em;">
+                                </i>
+                            </div>
+                    </div>
+
+                    <div class="nav-menu">
+                        <ul>
+                            <li class="menu-item">
+                                <a href="template.html" class="menu-item-link">
+                                <span>
+                                    <i class="feather-home"></i>       
+                                    Dashboard</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="menu-title">
+                                <span>Manage Items</span>
+                            </li>
+                            <li class="menu-item">
+                                <a href="add_item.html" class="menu-item-link">
+                                <span>
+                                    <i class="feather-plus-circle"></i>       
+                                    add item</span>
+                                    <span class="badge badge-pill bg-white shadow-sm">14</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="item_list.html" class="menu-item-link active">
+                                <span>
+                                    <i class="feather-plus-circle"></i>       
+                                    item list</span>
+                                    <span class="badge badge-pill bg-white shadow-sm">14</span>
+                                </a>
+                            </li>
+                            <li class="menu-space">
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            <div class="col-sm-12 col-lg-9 col-xl-10 vh-100 content">
+                <div class="row header mb-3">
+                    <div class="col-12">
+                        <div class="p-2 bg-primary d-flex btn-light justify-content-between align-items-center">
+                            <div class="show-sidebar-btn">
+                                <i class="feather-menu text-light d-lg-none" style="font-size: 2em;">
+                                </i>
+                            </div>
+                            <form action="" method="post" class="d-none d-md-block mr-xl-auto">
+                                <div class="form-inline">
+                                    <input type="text" name="" id="" class="form-control mr-1">
+                                
+                                    <button class="btn btn-light">
+                                        <i class="feather-search text-primary"></i>
+                                    </button>
+                                </div> 
+                            </form>
+
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <img src="img/user/avatar1.jpg" alt="avatar" class="user-img"> Swan-Yee-Tun
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <div class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">Logout</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-white mb-4">
+                              <li class="breadcrumb-item"><a href="template.html">Home</a></li>
+                              <li class="breadcrumb-item"><a href="item_list.html">Items</a></li>
+                              <li class="breadcrumb-item active" aria-current="add_item.html">Items List</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h4>
+                                        <i class="feather-plus-circle text-primary"></i>Items List
+                                    </h4>
+                                    <div class="">
+                                        <a href="#" class="btn btn-outline-primary full-screen-btn">
+                                            <i class="feather-maximize-2"></i>
+                                        </a>
+                                        <a href="add_item.html" class="btn btn-outline-primary">
+                                            <i class="feather-list"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <h1 class="text-center">Full Page Card</h1>
+                                  <table id="list" class="table table-hover">
+                                      <thead>
+                                    <tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+                                      </thead>
+                                      <tbody>
+                                        
+                                    <tr><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr>
+                                    <tr><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr>
+                                    <tr><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr>
+                                    <tr><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr>
+                                    <tr><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr>
+                                    <tr><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr>
+                                    <tr><td>Row:7 Cell:1</td><td>Row:7 Cell:2</td><td>Row:7 Cell:3</td><td>Row:7 Cell:4</td><td>Row:7 Cell:5</td></tr>
+                                    <tr><td>Row:8 Cell:1</td><td>Row:8 Cell:2</td><td>Row:8 Cell:3</td><td>Row:8 Cell:4</td><td>Row:8 Cell:5</td></tr>
+                                    <tr><td>Row:9 Cell:1</td><td>Row:9 Cell:2</td><td>Row:9 Cell:3</td><td>Row:9 Cell:4</td><td>Row:9 Cell:5</td></tr>
+                                    <tr><td>Row:10 Cell:1</td><td>Row:10 Cell:2</td><td>Row:10 Cell:3</td><td>Row:10 Cell:4</td><td>Row:10 Cell:5</td></tr>
+                                    <tr><td>Row:11 Cell:1</td><td>Row:11 Cell:2</td><td>Row:11 Cell:3</td><td>Row:11 Cell:4</td><td>Row:11 Cell:5</td></tr>
+                                    <tr><td>Row:12 Cell:1</td><td>Row:12 Cell:2</td><td>Row:12 Cell:3</td><td>Row:12 Cell:4</td><td>Row:12 Cell:5</td></tr>
+                                    <tr><td>Row:13 Cell:1</td><td>Row:13 Cell:2</td><td>Row:13 Cell:3</td><td>Row:13 Cell:4</td><td>Row:13 Cell:5</td></tr>
+                                    <tr><td>Row:14 Cell:1</td><td>Row:14 Cell:2</td><td>Row:14 Cell:3</td><td>Row:14 Cell:4</td><td>Row:14 Cell:5</td></tr>
+                                    <tr><td>Row:15 Cell:1</td><td>Row:15 Cell:2</td><td>Row:15 Cell:3</td><td>Row:15 Cell:4</td><td>Row:15 Cell:5</td></tr>
+                                    <tr><td>Row:16 Cell:1</td><td>Row:16 Cell:2</td><td>Row:16 Cell:3</td><td>Row:16 Cell:4</td><td>Row:16 Cell:5</td></tr>
+                                    <tr><td>Row:17 Cell:1</td><td>Row:17 Cell:2</td><td>Row:17 Cell:3</td><td>Row:17 Cell:4</td><td>Row:17 Cell:5</td></tr>
+                                    <tr><td>Row:18 Cell:1</td><td>Row:18 Cell:2</td><td>Row:18 Cell:3</td><td>Row:18 Cell:4</td><td>Row:18 Cell:5</td></tr>
+                                    <tr><td>Row:19 Cell:1</td><td>Row:19 Cell:2</td><td>Row:19 Cell:3</td><td>Row:19 Cell:4</td><td>Row:19 Cell:5</td></tr>
+                                    <tr><td>Row:20 Cell:1</td><td>Row:20 Cell:2</td><td>Row:20 Cell:3</td><td>Row:20 Cell:4</td><td>Row:20 Cell:5</td></tr>
+                                    <tr><td>Row:21 Cell:1</td><td>Row:21 Cell:2</td><td>Row:21 Cell:3</td><td>Row:21 Cell:4</td><td>Row:21 Cell:5</td></tr>
+                                    <tr><td>Row:22 Cell:1</td><td>Row:22 Cell:2</td><td>Row:22 Cell:3</td><td>Row:22 Cell:4</td><td>Row:22 Cell:5</td></tr>
+                                    <tr><td>Row:23 Cell:1</td><td>Row:23 Cell:2</td><td>Row:23 Cell:3</td><td>Row:23 Cell:4</td><td>Row:23 Cell:5</td></tr>
+                                    <tr><td>Row:24 Cell:1</td><td>Row:24 Cell:2</td><td>Row:24 Cell:3</td><td>Row:24 Cell:4</td><td>Row:24 Cell:5</td></tr>
+                                    <tr><td>Row:25 Cell:1</td><td>Row:25 Cell:2</td><td>Row:25 Cell:3</td><td>Row:25 Cell:4</td><td>Row:25 Cell:5</td></tr>
+                                    <tr><td>Row:26 Cell:1</td><td>Row:26 Cell:2</td><td>Row:26 Cell:3</td><td>Row:26 Cell:4</td><td>Row:26 Cell:5</td></tr>
+                                    <tr><td>Row:27 Cell:1</td><td>Row:27 Cell:2</td><td>Row:27 Cell:3</td><td>Row:27 Cell:4</td><td>Row:27 Cell:5</td></tr>
+                                    <tr><td>Row:28 Cell:1</td><td>Row:28 Cell:2</td><td>Row:28 Cell:3</td><td>Row:28 Cell:4</td><td>Row:28 Cell:5</td></tr>
+                                    <tr><td>Row:29 Cell:1</td><td>Row:29 Cell:2</td><td>Row:29 Cell:3</td><td>Row:29 Cell:4</td><td>Row:29 Cell:5</td></tr>
+                                    <tr><td>Row:30 Cell:1</td><td>Row:30 Cell:2</td><td>Row:30 Cell:3</td><td>Row:30 Cell:4</td><td>Row:30 Cell:5</td></tr>
+                                    <tr><td>Row:31 Cell:1</td><td>Row:31 Cell:2</td><td>Row:31 Cell:3</td><td>Row:31 Cell:4</td><td>Row:31 Cell:5</td></tr>
+                                    <tr><td>Row:32 Cell:1</td><td>Row:32 Cell:2</td><td>Row:32 Cell:3</td><td>Row:32 Cell:4</td><td>Row:32 Cell:5</td></tr>
+                                    <tr><td>Row:33 Cell:1</td><td>Row:33 Cell:2</td><td>Row:33 Cell:3</td><td>Row:33 Cell:4</td><td>Row:33 Cell:5</td></tr>
+                                    <tr><td>Row:34 Cell:1</td><td>Row:34 Cell:2</td><td>Row:34 Cell:3</td><td>Row:34 Cell:4</td><td>Row:34 Cell:5</td></tr>
+                                    <tr><td>Row:35 Cell:1</td><td>Row:35 Cell:2</td><td>Row:35 Cell:3</td><td>Row:35 Cell:4</td><td>Row:35 Cell:5</td></tr>
+                                    <tr><td>Row:36 Cell:1</td><td>Row:36 Cell:2</td><td>Row:36 Cell:3</td><td>Row:36 Cell:4</td><td>Row:36 Cell:5</td></tr>
+                                    <tr><td>Row:37 Cell:1</td><td>Row:37 Cell:2</td><td>Row:37 Cell:3</td><td>Row:37 Cell:4</td><td>Row:37 Cell:5</td></tr>
+                                    <tr><td>Row:38 Cell:1</td><td>Row:38 Cell:2</td><td>Row:38 Cell:3</td><td>Row:38 Cell:4</td><td>Row:38 Cell:5</td></tr>
+                                    <tr><td>Row:39 Cell:1</td><td>Row:39 Cell:2</td><td>Row:39 Cell:3</td><td>Row:39 Cell:4</td><td>Row:39 Cell:5</td></tr>
+                                    <tr><td>Row:40 Cell:1</td><td>Row:40 Cell:2</td><td>Row:40 Cell:3</td><td>Row:40 Cell:4</td><td>Row:40 Cell:5</td></tr>
+                                    <tr><td>Row:41 Cell:1</td><td>Row:41 Cell:2</td><td>Row:41 Cell:3</td><td>Row:41 Cell:4</td><td>Row:41 Cell:5</td></tr>
+                                    <tr><td>Row:42 Cell:1</td><td>Row:42 Cell:2</td><td>Row:42 Cell:3</td><td>Row:42 Cell:4</td><td>Row:42 Cell:5</td></tr>
+                                    <tr><td>Row:43 Cell:1</td><td>Row:43 Cell:2</td><td>Row:43 Cell:3</td><td>Row:43 Cell:4</td><td>Row:43 Cell:5</td></tr>
+                                    <tr><td>Row:44 Cell:1</td><td>Row:44 Cell:2</td><td>Row:44 Cell:3</td><td>Row:44 Cell:4</td><td>Row:44 Cell:5</td></tr>
+                                    <tr><td>Row:45 Cell:1</td><td>Row:45 Cell:2</td><td>Row:45 Cell:3</td><td>Row:45 Cell:4</td><td>Row:45 Cell:5</td></tr>
+                                    <tr><td>Row:46 Cell:1</td><td>Row:46 Cell:2</td><td>Row:46 Cell:3</td><td>Row:46 Cell:4</td><td>Row:46 Cell:5</td></tr>
+                                    <tr><td>Row:47 Cell:1</td><td>Row:47 Cell:2</td><td>Row:47 Cell:3</td><td>Row:47 Cell:4</td><td>Row:47 Cell:5</td></tr>
+                                    <tr><td>Row:48 Cell:1</td><td>Row:48 Cell:2</td><td>Row:48 Cell:3</td><td>Row:48 Cell:4</td><td>Row:48 Cell:5</td></tr>
+                                    <tr><td>Row:49 Cell:1</td><td>Row:49 Cell:2</td><td>Row:49 Cell:3</td><td>Row:49 Cell:4</td><td>Row:49 Cell:5</td></tr>
+                                      </tbody>
+                                    </table>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="vendor/way_point/jquery.waypoints.js"></script>
+    <script src="vendor/data_table/jquery.dataTables.min.js"></script>
+    <script src="JS/app.js"></script>
+    <script>
+        $('#list').dataTable();
+    </script>
+</body>
+</html>
